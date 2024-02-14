@@ -40,8 +40,8 @@ button {
 
 #buy-now {
   display: flex;
-  flex-direction: row;
-  width: fit-content;
+  width: 70%;
+  justify-content: space-around;
   background-image: linear-gradient(to right,#f4e8f3, #f3eff6, #eee0f9);
 }
 
@@ -61,3 +61,18 @@ h1 {
 }
 
 /* Buy now section ends here */
+
+/* product info section */
+
+#product-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#info-right-side{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

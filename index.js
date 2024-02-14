@@ -17,4 +17,47 @@ const buyNow = document.getElementById('buy-now');
 buyNow.innerHTML = temp_late;
 }
 
-createBuyNow(true)
+createBuyNow(true);
+
+const createProductInfo = () => {
+  const temp = `
+  <div class="info-right-side">
+    <select name="" id="">
+    <optgroup label="Headphone Type">
+        <option value="">Headphone Type</option>
+      </optgroup>
+    </select>
+    <select name="" id="">
+      <optgroup label="Price">
+        <option value="">Price</option>
+      </optgroup>
+    </select>
+    <select name="" id="">
+      <optgroup label="Color">
+        <option value="" >Color</option>
+      </optgroup>
+    </select>
+    <select name="" id="">
+      <optgroup label="Material">
+        <option value="" >Material</option>
+      </optgroup>
+    </select>
+    <select name="" id="">
+     <optgroup label="Offer">
+        <option value="" >Offer</option>
+      </optgroup>
+    </select>
+  </div>
+  
+  <select name="" id="">
+    <option value="" >Headphone Type</option>
+  </select>
+`
+
+const productInfo = document.getElementById('product-info');
+
+productInfo.innerHTML = temp;
+}
+
+createProductInfo()
+

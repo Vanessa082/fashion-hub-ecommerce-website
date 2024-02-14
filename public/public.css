@@ -25,11 +25,39 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
 button {
   border: none;
   cursor: pointer;
+  padding: 10px;
   width: fit-content;
   height: fit-content;
 }
+
+/* Buy now section starts here */
+
+#buy-now {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  background-image: linear-gradient(to right,#f4e8f3, #f3eff6, #eee0f9);
+}
+
+h1 {
+  font-size: 34px;
+  font-family: "Inter";
+  font-weight: 700;
+  color: #3a4980;
+}
+
+#buy-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 29.5px;
+  background-color: #3a4980;
+}
+
+/* Buy now section ends here */

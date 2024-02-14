@@ -1,5 +1,5 @@
 #navbar {
-  width: fit-content;
+  width: 100%;
   justify-content: space-between;
   gap: 60px;
 }
@@ -16,7 +16,7 @@ ul,
 }
 
 .left-nav {
-  width: 627px;
+  width: fit-content;
   gap: 14px;
 }
 
@@ -36,7 +36,7 @@ ul {
 }
 
 .right-nav {
-  width: 324px;
+  width: fit-content;
   gap: 17px;
 }
 

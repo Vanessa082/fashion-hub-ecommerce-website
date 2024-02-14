@@ -24,16 +24,16 @@ const template = `
         </div>
       </li>
       <li>Brand</li>
-      <li>Contact</li>
+      <li><a href='./src/pages/contact/contact.html'>Contact</a></li>
       <li>FAQs</li>
     </ul>
   </div>
 
   <div class="right-nav">
-    <img src="./assets/image/card.svg" alt="shopping-card" class="shopping-card">
-    <img src="./assets/image/notification.svg" alt="notification-icon" class="notification-icon">
+    <img src="/public/image/card.svg" alt="shopping-card" class="shopping-card">
+    <img src="/public/image/notification.svg" alt="notification-icon" class="notification-icon">
     <div class="user-profile">
-      <img src="./assets/image/profile.svg" alt="user-profile">
+      <img src="/public/image/profile.svg" alt="user-profile">
       <div class="details">
         <span class="greetings">Good morning!</span>
         <span class="username">Scarlet Johnson</span>

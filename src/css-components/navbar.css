@@ -1,0 +1,69 @@
+#navbar {
+  width: fit-content;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+#navbar,
+.right-nav,
+.left-nav,
+ul,
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--cream_white);
+  align-items: center;
+}
+
+.left-nav {
+  width: 627px;
+  gap: 14px;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #0d3356;
+}
+
+ul {
+  gap: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--ul_blue);
+}
+
+.right-nav {
+  width: 324px;
+  gap: 17px;
+}
+
+.shopping-card {
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+ul li a {
+  display: block;
+}
+#navbar {
+  position: relative;
+}
+
+.active {
+  float: left;
+  text-align: center;
+}
+.subnavbar {
+  display: none;
+  padding: 0; /*if forgotten the size of the dropdown nav will be greater than it's parent*/
+  margin: 0;
+}
+#navbar li:hover .subnavbar {
+  display: block;
+}

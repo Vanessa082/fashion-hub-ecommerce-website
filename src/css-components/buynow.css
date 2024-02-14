@@ -1,0 +1,19 @@
+.buy-now {
+  display: flex;
+  background-color: linear-gradient(#f4e8f3, #f3eff6, #eee0f9);
+}
+
+h1 {
+  font-size: 34px;
+  font-family: "Inter";
+  font-weight: 700;
+  color: #3a4980;
+}
+
+#buy-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 29.5px;
+  background-color: #3a4980;
+}

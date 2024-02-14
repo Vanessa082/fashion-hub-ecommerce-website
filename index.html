@@ -13,6 +13,38 @@
     <div id="buy-now"></div>
 
     <div id="product-info"></div>
+
+    <div class="display-card">
+      <div class="top">
+        <div class="subcard" id="subcards">
+          <a href="/details.html?id=${item.id}&category=${item.category}"><img src="public/image/My project (1) 1.png" id="details-page"/></a>
+          <i class="fa-regular fa-heart"></i>
+        </div>
+  
+        <div class="snikersprice">
+          <span id="snykers">TDX Sinkers</span>
+          <span id="snykers-price">₹ 675.00</span>
+        </div>
+  
+        <div class="shoes-available" data-name>
+          <p id="shoes"> 5 types of shoes available</p>
+        </div>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <p id="number">(121)</p>
+        </div>
+        <div class="date">
+          <button id="addtocard" class="addtocard" data-imageid="${item.id}">Add to Card</button>
+          <button id="shortlist">Short List</button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
   </body>
   <script src="./index.js" type="module"></script>
 </html>

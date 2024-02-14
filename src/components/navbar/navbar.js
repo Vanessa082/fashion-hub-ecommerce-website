@@ -1,5 +1,5 @@
 const createNavBar = () => {
-  const baseUrl = window.location.host.includes('github') ? 'fashion-hub-ecommerce-website' : '';
+  const baseUrl = window.location.host.includes('github') ? '/fashion-hub-ecommerce-website' : '';
 
   const template = `
     <div class="left-nav">

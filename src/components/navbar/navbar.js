@@ -1,9 +1,9 @@
-const createNavBar = () => {
-  const baseUrl = window.location.host.includes('github') ? '/fashion-hub-ecommerce-website' : '';
+const createNavBar = (isIndexPage = false) => {
+  const baseUrl = isIndexPage ? '.' : '../../..'; // root path
 
   const template = `
     <div class="left-nav">
-      <h1>FashionHub</h1>
+      <h1><a href="${baseUrl}/index.html">FashionHub</a></h1>
       <ul>
         <li class="active">
           Category

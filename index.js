@@ -1,3 +1,3 @@
-// import { createNavBar } from './src/components/navbar/navbar.js';
+import { createNavBar } from "./src/components/navbar/navbar.js";
 
-// createNavBar();
+createNavBar(true); // is index page is true

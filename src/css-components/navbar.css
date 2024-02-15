@@ -86,4 +86,18 @@ ul {
 .category .sub-category li {
   cursor: pointer;
   white-space: nowrap;
+  width: 100%;
+  display: flex;
+
+  a {
+    border: 1px solid transparent;
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+
+    &.active {
+      border: 1px solid black;
+    }
+  }
 }

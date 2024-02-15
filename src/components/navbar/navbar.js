@@ -8,10 +8,7 @@ const createNavBar = (isIndexPage = false) => {
         <li class="category">
           Category
           <ul class="sub-category">
-            <li class="active"><a href="#">Women's Categories:</a></li>
-            <li class="active"><a href="#">Tops</a></li>
-            <li class="active"><a href="#">Bottoms</a></li>
-            <li class="active"><a href="#">Shoes and accessories</a></li>
+            <!-- <li class="active"><a href="#">Women's Categories:</a></li> -->
           </ul>
         </li>
         <li>Brand</li>
@@ -37,12 +34,63 @@ const createNavBar = (isIndexPage = false) => {
 
   navBar.innerHTML = template;
 
+  const displayCategory = document.querySelector('.sub-category');
 
-  const displayCategory = document.querySelector('sub-category')
+  fetch('https://dummyjson.com/products/categories')
+    .then(res => res.json())
+    .then(res => {
+      for (let i = 0; i < res.length; i++) {
+        const category = res[i];
+        const tag_hash = '#' + category;
+        const window_hash = window.location.hash;
 
+        const list = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = tag_hash;
+        a.innerHTML = category;
+
+        if (tag_hash === window_hash) {
+          a.classList.add('active');
+        }
+
+        list.appendChild(a);
+        displayCategory.appendChild(list);
+      }
+
+      addFunctionalityToATags()
+    })
+    .catch((er) => {
+      console.warn(er);
+    });
 
   // ADD ANY NEED NAV EVENT LISTENERS BELOW
 };
+
+const addFunctionalityToATags = () => {
+  const categoryTags = document.querySelectorAll('.sub-category > li > a');
+
+  const removeClassName = () => {
+    categoryTags.forEach(t => t.classList.remove('active'))
+  }
+
+  categoryTags.forEach((a_tag) => {
+    a_tag.onclick = () => {
+      removeClassName();
+
+      a_tag.classList.add('active');
+
+      const window_hash = window.location.hash;
+
+      const tag_hash = '#' + a_tag.href.split('#').pop();
+      
+      if (window_hash === tag_hash ) {
+        a_tag.classList.remove('active');
+        const newUrl = a_tag.href.split('#').shift();
+        window.location = newUrl;
+      }
+    };
+  });
+}
 
 export {
   createNavBar,

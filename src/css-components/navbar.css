@@ -20,6 +20,10 @@ ul,
   gap: 14px;
 }
 
+.left-nav > ul > li {
+  padding: 16px 0;
+}
+
 h1 {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
@@ -48,22 +52,38 @@ ul {
   flex-direction: column;
 }
 
-ul li a {
+/* ul li {
   display: block;
-}
+} */
 #navbar {
   position: relative;
 }
 
-.active {
+.category {
   float: left;
   text-align: center;
+  position: relative;
 }
-.subnavbar {
+
+.category .sub-category {
+  position: absolute;
+  top: calc(100%);
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
-  padding: 0; /*if forgotten the size of the dropdown nav will be greater than it's parent*/
-  margin: 0;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  padding: 1rem;
+  border-radius: 5px;
 }
-#navbar li:hover .subnavbar {
-  display: block;
+
+.category:hover .sub-category {
+  display: flex;
+}
+
+.category .sub-category li {
+  cursor: pointer;
+  white-space: nowrap;
 }

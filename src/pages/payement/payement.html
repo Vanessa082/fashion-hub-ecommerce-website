@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../public/public.css" />
+    <link rel="stylesheet" href="./payement.css" />
+    <title>Payment form</title>
+  </head>
+  <body>
+    <nav id="navbar"></nav>
+    
+    <div class="payment-form">
+      <h2>Payment Form</h2>
+
+      <form>
+          <div class="form-group">
+              <label for="name">FirstName :</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="name">LastName :</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+          <div class="form-group">
+              <label for="email">E-mail :</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+              <label for="address">Address :</label>
+              <input type="text" id="address" name="address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="">Bill Amount :</label>
+            <input type="number" id="billamount" required>
+        </div>
+
+          <div class="form-group">
+              <label for="card-number">Numéro de carte de crédit :</label>
+              <input type="text" id="card-number" name="card-number" required>
+          </div>
+
+          <button class="hello" type="submit">Payer</button>
+      </form>
+
+      <div class="total">
+          <h3> Total ($) : </h3>
+          <input id="total-amount" value="" placeholder="pay Amount :">
+      </div>
+  </div>
+
+    <footer id="footer"> </footer>
+  </body>
+  <script type="module" src="./payement.js"></script>
+</html>

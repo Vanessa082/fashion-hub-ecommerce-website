@@ -1,6 +1,12 @@
+import { createFooter } from "./src/components/footer/footer.js";
+
+createFooter(true)
+
 import { createNavBar } from "./src/components/navbar/navbar.js";
 
 createNavBar(true); // is index page is true
+
+// Buy now section starts here
 
 const createBuyNow = (isIndexPage = false) => {
   const baseUrl = isIndexPage ? '.' : '../../..'; // root path
@@ -61,3 +67,6 @@ productInfo.innerHTML = temp;
 
 createProductInfo()
 
+// Buy now section ends here
+
+// page pagination starts here

@@ -5,26 +5,14 @@ const createNavBar = (isIndexPage = false) => {
     <div class="left-nav">
       <h1><a href="${baseUrl}/index.html">FashionHub</a></h1>
       <ul>
-        <li class="active">
+        <li class="category">
           Category
-          <div style="width: auto">
-            <div style="float: left; width: 10%">
-              <ul class="subnavbar">
-                <li class="active"><a href="#">Men's Categories:</a></li>
-                <li class="active"><a href="#">Tops</a></li>
-                <li class="active"><a href="#">Bottoms</a></li>
-                <li class="active"><a href="#">Shoes and accessories</a></li>
-              </ul>
-            </div>
-            <div style="float: right; width: 10%">
-              <ul class="subnavbar">
-                <li class="active"><a href="#">Women's Categories:</a></li>
-                <li class="active"><a href="#">Tops</a></li>
-                <li class="active"><a href="#">Bottoms</a></li>
-                <li class="active"><a href="#">Shoes and accessories</a></li>
-              </ul>
-            </div>
-          </div>
+          <ul class="sub-category">
+            <li class="active"><a href="#">Women's Categories:</a></li>
+            <li class="active"><a href="#">Tops</a></li>
+            <li class="active"><a href="#">Bottoms</a></li>
+            <li class="active"><a href="#">Shoes and accessories</a></li>
+          </ul>
         </li>
         <li>Brand</li>
         <li><a href='${baseUrl}/src/pages/contact/contact.html'>Contact</a></li>
@@ -48,6 +36,10 @@ const createNavBar = (isIndexPage = false) => {
   const navBar = document.getElementById('navbar');
 
   navBar.innerHTML = template;
+
+
+  const displayCategory = document.querySelector('sub-category')
+
 
   // ADD ANY NEED NAV EVENT LISTENERS BELOW
 };

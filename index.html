@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/public.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="./index.css" />
     <title>fashion-hub-e-commerce-website</title>
   </head>
@@ -14,35 +18,41 @@
 
     <div id="product-info"></div>
 
-    <div class="display-card">
-      <div class="top">
+    <div id="display-card">
+      <div id="card">
         <div class="subcard" id="subcards">
-          <a href="/details.html?id=${item.id}&category=${item.category}"><img src="public/image/My project (1) 1.png" id="details-page"/></a>
+          <a href="./src/pages/prod-details/prod-details.html"
+            ><img src="public/image/My project (1) 1.png" id="details-page"
+          /></a>
           <i class="fa-regular fa-heart"></i>
         </div>
-  
+
         <div class="snikersprice">
           <span id="snykers">TDX Sinkers</span>
           <span id="snykers-price">₹ 675.00</span>
         </div>
-  
+
         <div class="shoes-available" data-name>
-          <p id="shoes"> 5 types of shoes available</p>
+          <p id="shoes">5 types of shoes available</p>
         </div>
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+          <span class="material-symbols-outlined"> star </span>
+          <span class="material-symbols-outlined"> star </span>
+          <span class="material-symbols-outlined"> star </span>
+          <span class="material-symbols-outlined"> star </span>
+          <span class="material-symbols-outlined"> star </span>
           <p id="number">(121)</p>
         </div>
         <div class="date">
-          <button id="addtocard" class="addtocard" data-imageid="${item.id}">Add to Card</button>
+          <button id="addtocard" class="addtocard" data-imageid="">
+            Add to Card
+          </button>
           <button id="shortlist">Short List</button>
         </div>
       </div>
     </div>
+
+    <div id="page-pagination"></div>
 
     <footer id="footer"></footer>
   </body>

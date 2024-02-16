@@ -94,3 +94,59 @@ optgroup{
    color: var(--ul_blue);
    font-family: inherit;
 }
+
+/* product details start */
+
+#product-image{
+  background-color: #f7f5f7;
+}
+
+.product-price-details{
+  display: flex;
+  align-items: center;
+
+  #productname{
+    color: #667085;
+    font:  500 'Inter' 18px;
+  }
+}
+
+#product-price{
+  color: #344054;
+  font: 700 18px inherit;
+}
+
+#product-type{
+  color: #98a2b3;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.product-rating{
+  display: flex;
+}
+
+.product-rating i{
+  color: #FDB022;
+}
+
+#addtocard{
+  background-color: #3A4980;
+  border: 1px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#shortlist{
+  background-color: #fff;
+  border: 1px solid #D0D5DD;
+  padding: 8px 14px;
+  border-radius: 50px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}

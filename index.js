@@ -18,9 +18,9 @@ const createBuyNow = (isIndexPage = false) => {
 </div>
 <img src="${baseUrl}/public/image/backgroundimg.svg" alt="avatar image" />`;
 
-const buyNow = document.getElementById('buy-now');
+  const buyNow = document.getElementById('buy-now');
 
-buyNow.innerHTML = temp_late;
+  buyNow.innerHTML = temp_late;
 }
 
 createBuyNow(true);
@@ -60,13 +60,38 @@ const createProductInfo = () => {
   </select>
 `
 
-const productInfo = document.getElementById('product-info');
+  const productInfo = document.getElementById('product-info');
 
-productInfo.innerHTML = temp;
+  productInfo.innerHTML = temp;
 }
 
 createProductInfo()
 
 // Buy now section ends here
+
+//display product
+
+const displayCard = document.getElementById('display-card')
+
+const categoryDisplayCards = (category) => {
+  fetch(`https://dummyjson.com/products/categories/${category}`)
+    .then(res => res.json())
+    .then(products => {
+      // Clear existing products
+      displayCard.innerHTML = '';
+
+      products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.price}</p>
+          <p>${product.description}</p>
+        `;
+        displayCard.appendChild(productDiv);
+      });
+    })
+    .catch(error => console.error('Error fetching products: ', error));
+}
 
 // page pagination starts here
